@@ -18,6 +18,7 @@ import { useActivity } from 'src/stores/activity';
 import {
   useDatabases,
   useFrameworks,
+  useHobbies,
   useLanguages,
   useLibraries,
   usePractices,
@@ -52,6 +53,7 @@ const NavBarLayout = () => {
         databases: useDatabases.getState().get(),
         practices: usePractices.getState().get(),
         tools: useTools.getState().get(),
+        hobbies: useHobbies.getState().get(),
       },
       activities: useActivity.getState().activities,
     };
@@ -99,6 +101,7 @@ const NavBarLayout = () => {
           technologies = [],
           practices = [],
           tools = [],
+          hobbies = [],
         } = skills;
         useBasicDetails.getState().reset(basics);
         useLanguages.getState().reset(languages);
@@ -108,6 +111,7 @@ const NavBarLayout = () => {
         useTechnologies.getState().reset(technologies);
         usePractices.getState().reset(practices);
         useTools.getState().reset(tools);
+        useHobbies.getState().reset(hobbies);
         useExperiences.getState().reset(work);
         useEducations.getState().reset(education);
         useVoluteeringStore.getState().reset(volunteer);

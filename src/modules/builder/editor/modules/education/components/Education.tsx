@@ -20,6 +20,9 @@ const Education: React.FC<IEducationProps> = ({ educationInfo, currentIndex }) =
         case 'academyName':
           currentExpInfo.institution = value;
           break;
+        case 'location':
+          currentExpInfo.location = value;
+          break;
         case 'degree':
           currentExpInfo.studyType = value;
           break;
@@ -60,6 +63,20 @@ const Education: React.FC<IEducationProps> = ({ educationInfo, currentIndex }) =
         onChange={(e: ChangeEvent<HTMLInputElement>) => {
           const value = e.target.value;
           onChangeHandler('academyName', value);
+        }}
+        autoComplete="off"
+        fullWidth
+        required
+        autoFocus={true}
+        sx={{ marginBottom: '26px' }}
+      />
+      <TextField
+        label="School or College Location"
+        variant="filled"
+        value={educationInfo.location}
+        onChange={(e: ChangeEvent<HTMLInputElement>) => {
+          const value = e.target.value;
+          onChangeHandler('location', value);
         }}
         autoComplete="off"
         fullWidth

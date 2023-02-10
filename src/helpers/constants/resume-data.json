@@ -91,6 +91,10 @@
       { "name": "Webpack", "level": 3 },
       { "name": "Eclipse", "level": 3 },
       { "name": "Bitbucket", "level": 3 }
+    ],
+    "hobbies": [
+      { "name": "Foot-ball", "level": 3 },
+      { "name": "E-Learning", "level": 3 }
     ]
   },
 

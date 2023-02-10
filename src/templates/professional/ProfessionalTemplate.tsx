@@ -64,6 +64,12 @@ export default function ProfessionalTemplate() {
           </Section>
         </SectionValidator>
 
+        <SectionValidator value={resumeData.education}>
+          <Section title="Education">
+            <Education education={resumeData.education} />
+          </Section>
+        </SectionValidator>
+
         <SectionValidator value={involvements}>
           <Section title="Key Projects / Involvements">
             <Involvement data={involvements} />
@@ -111,9 +117,9 @@ export default function ProfessionalTemplate() {
             <UnratedSkills items={skills.tools} />
           </Section>
         </SectionValidator>
-        <SectionValidator value={resumeData.education}>
-          <Section title="Education">
-            <Education education={resumeData.education} />
+        <SectionValidator value={skills.hobbies}>
+          <Section title="Hobbies">
+            <UnratedSkills items={skills.hobbies} />
           </Section>
         </SectionValidator>
       </RightSection>

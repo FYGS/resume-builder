@@ -1,6 +1,7 @@
 import {
   useDatabases,
   useFrameworks,
+  useHobbies,
   useLanguages,
   useLibraries,
   usePractices,
@@ -32,6 +33,7 @@ export const useResumeStore = () => {
       databases: useDatabases((state) => state.get()),
       practices: usePractices((state) => state.get()),
       tools: useTools((state) => state.get()),
+      hobbies: useHobbies((state) => state.get()),
     },
     activities: useActivity((state) => state.get()),
   };
@@ -49,6 +51,7 @@ export const resetResumeStore = () => {
   useTechnologies.getState().reset(ResumeData.skills.technologies);
   usePractices.getState().reset(ResumeData.skills.practices);
   useTools.getState().reset(ResumeData.skills.tools);
+  useHobbies.getState().reset(ResumeData.skills.hobbies);
   useExperiences.getState().reset(ResumeData.work);
   useEducations.getState().reset(ResumeData.education);
   useVoluteeringStore.getState().reset(ResumeData.volunteer);

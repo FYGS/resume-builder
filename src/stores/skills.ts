@@ -132,3 +132,17 @@ export const useTools = create<ISkillState>(
     { name: 'tools' }
   )
 );
+
+export const useHobbies = create<ISkillState>(
+  persist(
+    (set, get) => ({
+      title: 'Hobbies',
+      hasLevel: false,
+      values: resumeData.skills.hobbies,
+      isEnabled: true,
+
+      ...getMethods(set, get),
+    }),
+    { name: 'hobbies' }
+  )
+);

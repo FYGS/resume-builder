@@ -40,6 +40,7 @@ export interface ISkillsIntrf {
   libraries: IItem[];
   databases: IItem[];
   tools: IItem[];
+  hobbies: IItem[];
   practices: IItem[];
 }
 
@@ -69,6 +70,7 @@ export interface IEducation {
   score: string;
   courses: string[];
   website: string;
+  location: string;
 }
 
 export interface IVolunteer {

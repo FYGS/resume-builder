@@ -2,6 +2,7 @@ import { useState } from 'react';
 import {
   useDatabases,
   useFrameworks,
+  useHobbies,
   useLanguages,
   useLibraries,
   usePractices,
@@ -20,6 +21,7 @@ const SkillsLayout = () => {
     useDatabases(),
     usePractices(),
     useTools(),
+    useHobbies(),
   ];
 
   const [expanded, setExpanded] = useState<string | false>('Languages');

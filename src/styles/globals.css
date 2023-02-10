@@ -17,6 +17,11 @@ body {
   scrollbar-width: none; /* Firefox */
 }
 
+/* Override from tailwind */
+.css-4lwglx {
+  padding: 10px 5px 5px 5px;
+}
+
 @media print {
   body *,
   *::before,
